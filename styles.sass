@@ -1,6 +1,7 @@
 // color variables
 $very-dark-magenta: #502050
 $soft-pink: #EE68A4
+$dark-grayish-magenta: #937B92
 $light-grayish-magenta: #F7F2F7
 $White: white
 
@@ -24,6 +25,7 @@ body
 		position: absolute
 		top: 0
 		left: 0
+		z-index: -1
 
 	&::after
 		content: ""
@@ -33,6 +35,8 @@ body
 		position: absolute
 		bottom: 0
 		right: 0
+		z-index: -1
+
 .container
 	max-width: 1100px
 	margin: 0 auto
@@ -46,3 +50,44 @@ body
 .flex-c
 	@extend .flex
 	flex-direction: column
+
+main
+	.flex
+		justify-content: space-between
+		align-items: flex-start
+
+	.content
+		width: 50%
+
+		h1
+			margin: 0
+			font-size: 3.1rem
+			letter-spacing: -2px
+			line-height: 1em
+			max-width: 70%
+			color: $very-dark-magenta
+
+		p
+			font-size: .9rem
+			font-weight: 500
+			color: $dark-grayish-magenta
+			line-height: 1.8em
+			max-width: 80%
+
+	.ratings
+		.rating
+			background: $light-grayish-magenta
+			padding: 1rem 3rem
+			border-radius: 7px
+			width: 450px
+
+			&:not(:last-child)
+				margin-bottom: 1rem
+
+		h5
+			margin: 0
+
+		.top
+			margin-left: -5rem
+		.middle
+			margin-left: -2.5rem
