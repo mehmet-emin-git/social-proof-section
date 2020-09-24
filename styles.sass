@@ -1,1 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap')
+// color variables
+$very-dark-magenta: #502050
+$soft-pink: #EE68A4
+$light-grayish-magenta: #F7F2F7
+$White: white
+
+// font-family: 'Spartan', sans-serif;
+
+*, *::before, *::after
+	box-sizing: border-box
+
+body
+	margin: 0
+	padding: 0
+	font-family: 'Spartan', sans-serif
+	width: 100vw
+	height: 100vh
+
+	&::before
+		content: ""
+		width: 100%
+		height: 100%
+		background: url('images/bg-pattern-top-desktop.svg') no-repeat top left / 40% 50%
+		position: absolute
+		top: 0
+		left: 0
+
+	&::after
+		content: ""
+		width: 100%
+		height: 100%
+		background: url('images/bg-pattern-bottom-desktop.svg') no-repeat bottom right / 75% 80%
+		position: absolute
+		bottom: 0
+		right: 0
+.container
+	max-width: 1100px
+	margin: 0 auto
+	height: 100%
+
+.flex
+	display: flex
+	justify-content: center
+	align-items: center
+
+.flex-c
+	@extend .flex
+	flex-direction: column
